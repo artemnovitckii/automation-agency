@@ -14,6 +14,7 @@ interface TeamProps {
   name: string;
   position: string;
   socialNetworks: SociaNetworkslProps[];
+  blob: string;
 }
 
 interface SociaNetworkslProps {
@@ -24,60 +25,45 @@ interface SociaNetworkslProps {
 const teamList: TeamProps[] = [
   {
     imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    name: "Artem Novitckii",
+    position: "Chief Executive Officer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
+      { name: "Linkedin", url: "https://www.linkedin.com/in/artem-novitckii/" },
     ],
+    blob: "Experienced leader in driving business growth and innovation.",
   },
   {
     imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
-    socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
+    name: "Michael Shaimerden",
+    position: "Chief Operations Officer",
+    socialNetworks: [{ name: "Linkedin", url: "http://linkedin.com" }],
+    blob: "Expert in optimizing operations and ensuring efficiency.",
   },
   {
     imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
+    name: "Hitarth Sharma",
+    position: "Chief Technology Officer",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
+      { name: "Linkedin", url: "https://www.linkedin.com/in/hitarthsharma/" },
 
       {
         name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.instagram.com/disruptive.kiwi",
       },
     ],
+    blob: "Passionate about AI with 8+ years of experience.",
   },
   {
     imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
+    name: "Shannon Blackhall",
+    position: "Tech Lead",
     socialNetworks: [
-      { name: "Linkedin", url: "http://linkedin.com" },
       {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/shannon-blackhall-ba7357159/",
       },
     ],
+    blob: "Dedicated to leading tech teams to deliver innovative solutions.",
   },
 ];
 
@@ -96,10 +82,7 @@ export const Team = () => {
   };
 
   return (
-    <section
-      id="team"
-      className="container py-24 sm:py-32"
-    >
+    <section id="team" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Our Dedicated{" "}
@@ -108,13 +91,12 @@ export const Team = () => {
       </h2>
 
       <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        Meet our leadership team.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
         {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
+          ({ imageUrl, name, position, socialNetworks, blob }: TeamProps) => (
             <Card
               key={name}
               className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
@@ -132,7 +114,7 @@ export const Team = () => {
               </CardHeader>
 
               <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>{blob}</p>
               </CardContent>
 
               <CardFooter>

@@ -63,3 +63,27 @@ html {
     }
   }
 }
+
+.sponsors-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* List to animate */
+.sponsors-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: swipe 45s linear infinite;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

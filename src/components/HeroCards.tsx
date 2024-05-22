@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,9 +9,12 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
-import { LightBulbIcon } from "./Icons";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import {
+  CircleCheckBig,
+  Phone,
+  CircleDollarSign,
+  Proportions,
+} from "lucide-react";
 
 export const HeroCards = () => {
   return (
@@ -21,32 +24,49 @@ export const HeroCards = () => {
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <AvatarImage
-              alt=""
-              src="https://github.com/shadcn.png"
+              alt="Samsung Testimonial"
+              src="https://m.samsungsem.com/files/imageView.do?key=49750dd7-76bd-443f-ae06-d358f3ad4e8e"
             />
-            <AvatarFallback>SH</AvatarFallback>
+            <AvatarFallback>SP</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">John Doe React</CardTitle>
-            <CardDescription>@john_doe</CardDescription>
+            <CardTitle className="text-lg">Samsung Person</CardTitle>
+            <CardDescription>@samsung_person</CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>This landing page is awesome!</CardContent>
+        <CardContent>
+          Automate transformed our workflow, saving us countless hours and
+          significantly boosting our productivity with its intuitive AI-powered
+          tools.
+        </CardContent>
       </Card>
 
       {/* Team */}
-      <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      {/* <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
-          <img
-            src="https://i.pravatar.cc/150?img=58"
-            alt="user avatar"
-            className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-          />
-          <CardTitle className="text-center">Leo Miranda</CardTitle>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            className="lucide lucide-layout-dashboard absolute grayscale-[0%] -top-12  w-24 h-24 aspect-square object-cover"
+          >
+            <rect width="7" height="9" x="3" y="3" rx="1" />
+            <rect width="7" height="5" x="14" y="3" rx="1" />
+            <rect width="7" height="9" x="14" y="12" rx="1" />
+            <rect width="7" height="5" x="3" y="16" rx="1" />
+          </svg>
+
+          <CardTitle className="text-center">Automate:</CardTitle>
           <CardDescription className="font-normal text-primary">
-            Frontend Developer
+            Quick Stats:
           </CardDescription>
         </CardHeader>
 
@@ -106,64 +126,79 @@ export const HeroCards = () => {
             </a>
           </div>
         </CardFooter>
-      </Card>
+      </Card> */}
 
       {/* Pricing */}
-      <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute top-[220px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
-            Free
-            <Badge
-              variant="secondary"
-              className="text-sm text-primary"
-            >
-              Most popular
+            Automate:
+            <Badge variant="secondary" className="text-sm text-primary">
+              Quick Stats
             </Badge>
           </CardTitle>
-          <div>
+          {/* <div>
             <span className="text-3xl font-bold">$0</span>
             <span className="text-muted-foreground"> /month</span>
-          </div>
+          </div> */}
 
-          <CardDescription>
-            Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.
-          </CardDescription>
+          {/* <CardDescription>We love helping people</CardDescription> */}
         </CardHeader>
-
-        <CardContent>
-          <Button className="w-full">Start Free Trial</Button>
-        </CardContent>
-
-        <hr className="w-4/5 m-auto mb-4" />
-
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
-              (benefit: string) => (
-                <span
-                  key={benefit}
-                  className="flex"
-                >
-                  <Check className="text-green-500" />{" "}
-                  <h3 className="ml-2">{benefit}</h3>
-                </span>
-              )
-            )}
+            {[
+              "$45000+ saved",
+              "10 clients",
+              "In-house engineering team",
+              "Latest AI technologies",
+            ].map((benefit: string) => (
+              <span key={benefit} className="flex">
+                <CircleCheckBig className="text-green-500" />{" "}
+                <h3 className="ml-2">{benefit}</h3>
+              </span>
+            ))}
           </div>
         </CardFooter>
+        <hr className="w-4/5 m-auto mb-4" />
+        <CardContent>
+          <Button className="w-full">
+            <a href="#about">Learn more</a>
+          </Button>
+        </CardContent>
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[350px] -right-[10px] top-[5px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-          <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-            <LightBulbIcon />
+          <div className="mt-1 bg-primary/20 p-3 rounded-full flex items-center justify-center">
+            <Phone width={28} height={28} />
           </div>
           <div>
-            <CardTitle>Light & dark mode</CardTitle>
+            <CardTitle>Free Business Consultation</CardTitle>
             <CardDescription className="text-md mt-2">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Consectetur
-              natusm.
+              We don't charge anything if we can't help you.
+            </CardDescription>
+          </div>
+        </CardHeader>
+        <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
+          <div className="mt-1 bg-primary/20 p-3 rounded-full flex items-center justify-center">
+            <CircleDollarSign width={28} height={28} />
+          </div>
+          <div>
+            <CardTitle>You only pay % of what you save</CardTitle>
+            <CardDescription className="text-md mt-2">
+              Our pricing policy ensures that businesses save money with us.
+            </CardDescription>
+          </div>
+        </CardHeader>
+        <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
+          <div className="mt-1 bg-primary/20 p-3 rounded-full flex items-center justify-center">
+            <Proportions width={28} height={28} />
+          </div>
+          <div>
+            <CardTitle>Custom Solutions</CardTitle>
+            <CardDescription className="text-md mt-2">
+              Custom solutions for your problems.
             </CardDescription>
           </div>
         </CardHeader>

@@ -1,14 +1,14 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-export const Newsletter = () => {
+export const ContactUs = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Subscribed!");
   };
 
   return (
-    <section id="newsletter">
+    <section id="contact">
       <hr className="w-11/12 mx-auto" />
 
       <div className="container py-24 sm:py-32">

@@ -1,39 +1,26 @@
-import { About } from "./components/About";
-import { Cta } from "./components/Cta";
-import { FAQ } from "./components/FAQ";
-import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
 import { Navbar } from "./components/Navbar";
-import { Newsletter } from "./components/Newsletter";
-import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { Services } from "./components/Services";
-import { Sponsors } from "./components/Sponsors";
-import { Team } from "./components/Team";
-import { Testimonials } from "./components/Testimonials";
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import BookConsultation from "./pages/BookConsultation";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
-      <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing />
-      <Newsletter />
-      <FAQ />
-      <Footer />
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route
+          path="/free-automation-consultation"
+          Component={BookConsultation}
+        />
+      </Routes>
+
       <ScrollToTop />
-    </>
+      <Footer />
+    </Router>
   );
 }
 

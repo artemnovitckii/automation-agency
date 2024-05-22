@@ -61,25 +61,22 @@ const testimonials: TestimonialProps[] = [
 
 export const Testimonials = () => {
   return (
-    <section
-      id="testimonials"
-      className="container py-24 sm:py-32"
-    >
+    <section id="testimonials" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold">
-        Discover Why
+        Look at what
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          People Love{" "}
+          our clients{" "}
         </span>
-        This Landing Page
+        say
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
-        facere hic reiciendis illo
+        Reviews from our automation clients:
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:block columns-2  lg:columns-3 lg:gap-6 mx-auto space-y-4 lg:space-y-6">
+        {/* TODO: get testimonials */}
         {testimonials.map(
           ({ image, name, userName, comment }: TestimonialProps) => (
             <Card
@@ -88,10 +85,7 @@ export const Testimonials = () => {
             >
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
                 <Avatar>
-                  <AvatarImage
-                    alt=""
-                    src={image}
-                  />
+                  <AvatarImage alt="" src={image} />
                   <AvatarFallback>OM</AvatarFallback>
                 </Avatar>
 
