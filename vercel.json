@@ -3,7 +3,7 @@
     { "src": "/", "dest": "/" },
     {
       "src": "/free-automation-consultation",
-      "dest": "/free-automation-consultation"
+      "dest": "/"
     }
   ]
 }
