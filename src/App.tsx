@@ -1,10 +1,10 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "./App.css";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { ScrollToTop } from "./components/ScrollToTop";
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
 import BookConsultation from "./pages/BookConsultation";
+import Home from "./pages/Home";
 
 function App() {
   return (
