@@ -2,7 +2,6 @@ import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
