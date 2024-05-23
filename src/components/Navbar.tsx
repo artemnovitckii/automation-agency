@@ -100,7 +100,7 @@ export const Navbar = () => {
                     })}`}
                   >
                     <EnvelopeClosedIcon className="mr-2 w-5 h-5" />
-                    Book a call
+                    Book a Free Call
                   </a>
                 </nav>
               </SheetContent>
@@ -130,7 +130,7 @@ export const Navbar = () => {
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
               <EnvelopeClosedIcon className="mr-2 w-5 h-5" />
-              Book a call
+              Book a Free Call
             </a>
 
             <ModeToggle />

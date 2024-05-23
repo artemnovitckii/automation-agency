@@ -5,6 +5,8 @@ import { Navbar } from "./components/Navbar";
 import { ScrollToTop } from "./components/ScrollToTop";
 import BookConsultation from "./pages/BookConsultation";
 import Home from "./pages/Home";
+import ClientPage from "./pages/ClientPage";
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           path="/free-automation-consultation"
           Component={BookConsultation}
         />
+        <Route path="clients/:clientName" Component={ClientPage} />
       </Routes>
 
       <ScrollToTop />
