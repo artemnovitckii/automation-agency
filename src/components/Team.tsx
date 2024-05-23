@@ -8,6 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import artem from "../assets/artem.png";
+import hitarth from "../assets/hitarth.jpeg";
+import shannon from "../assets/shannon.jpeg";
+import michael from "../assets/michael.jpeg";
 
 interface TeamProps {
   imageUrl: string;
@@ -24,7 +28,7 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
+    imageUrl: artem,
     name: "Artem Novitckii",
     position: "Chief Executive Officer",
     socialNetworks: [
@@ -33,14 +37,14 @@ const teamList: TeamProps[] = [
     blob: "Experienced leader in driving business growth and innovation.",
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
+    imageUrl: michael,
     name: "Michael Shaimerden",
     position: "Chief Operations Officer",
     socialNetworks: [{ name: "Linkedin", url: "http://linkedin.com" }],
     blob: "Expert in optimizing operations and ensuring efficiency.",
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
+    imageUrl: hitarth,
     name: "Hitarth Sharma",
     position: "Chief Technology Officer",
     socialNetworks: [
@@ -54,7 +58,7 @@ const teamList: TeamProps[] = [
     blob: "Passionate about AI with 8+ years of experience.",
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
+    imageUrl: shannon,
     name: "Shannon Blackhall",
     position: "Tech Lead",
     socialNetworks: [

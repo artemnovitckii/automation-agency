@@ -1,4 +1,3 @@
-import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
@@ -28,9 +27,14 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">
-            <a href="/free-automation-consultation">Let's talk</a>
-          </Button>
+          <a
+            className={`w-full md:w-1/3 ${buttonVariants({
+              variant: "default",
+            })}`}
+            href="/free-automation-consultation"
+          >
+            Let's talk
+          </a>
 
           <a
             rel="noreferrer noopener"

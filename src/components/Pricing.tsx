@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 
 // enum PopularPlanType {
 //   NO = 0,
@@ -130,9 +130,14 @@ export const Pricing = () => {
         ))}
       </div> */}
       <div className="space-y-4">
-        <Button className="w-full md:mr-4 md:w-auto">
-          <a href="/free-automation-consultation">Discuss pricing</a>
-        </Button>
+        <a
+          className={`w-full md:mr-4 md:w-auto ${buttonVariants({
+            variant: "default",
+          })}`}
+          href="/free-automation-consultation"
+        >
+          Discuss pricing
+        </a>
       </div>
     </section>
   );

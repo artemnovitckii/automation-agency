@@ -71,7 +71,7 @@ export const Services = () => {
   const firstColumnServices = serviceList.slice(0, 4);
   const secondColumnServices = serviceList.slice(4);
   return (
-    <section className="container py-24 sm:py-32">
+    <section id="services" className="container py-24 sm:py-32">
       <div>
         <h2 className="text-3xl md:text-4xl font-bold">
           Our{" "}
