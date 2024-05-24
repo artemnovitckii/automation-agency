@@ -1,16 +1,16 @@
-import { Statistics } from "./Statistics";
-import whiteLogo from "../assets/logo-white.png";
 import blackLogo from "../assets/logo-black.png";
+import whiteLogo from "../assets/logo-white.png";
+import { Statistics } from "./Statistics";
 import { useTheme } from "./theme-provider";
 
 export const About = () => {
   const { theme } = useTheme();
+  console.log("theme", theme);
 
   return (
     <section id="about" className="container py-24 sm:py-32">
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
-          {/* TODO: replace image */}
           <img
             src={theme === "dark" ? whiteLogo : blackLogo}
             alt=""

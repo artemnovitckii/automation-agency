@@ -1,20 +1,21 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Badge } from "./ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
 import {
   CircleCheckBig,
-  Phone,
   CircleDollarSign,
+  Phone,
   Proportions,
 } from "lucide-react";
+import delux from "../assets/delux.avif";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Badge } from "./ui/badge";
 
 export const HeroCards = () => {
   return (
@@ -23,23 +24,21 @@ export const HeroCards = () => {
       <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
-            <AvatarImage
-              alt="Samsung Testimonial"
-              src="https://m.samsungsem.com/files/imageView.do?key=49750dd7-76bd-443f-ae06-d358f3ad4e8e"
-            />
-            <AvatarFallback>SP</AvatarFallback>
+            <AvatarImage alt="Delux Testemonial" src={delux} />
+            <AvatarFallback>IR</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">Samsung Person</CardTitle>
-            <CardDescription>@samsung_person</CardDescription>
+            <CardTitle className="text-lg">Irina Rais</CardTitle>
+            <CardDescription>@irina_rais</CardDescription>
           </div>
         </CardHeader>
 
         <CardContent>
-          Automate transformed our workflow, saving us countless hours and
-          significantly boosting our productivity with its intuitive AI-powered
-          tools.
+          The automation solution provided by Automate has saved us a lot of
+          time from having to do manual and tedious data entry work that
+          should’ve been automated long ago." — Irina Rais, Director, Delux
+          Interiors
         </CardContent>
       </Card>
 
@@ -129,7 +128,7 @@ export const HeroCards = () => {
       </Card> */}
 
       {/* Pricing */}
-      <Card className="absolute top-[220px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute top-[260px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
             Automate:
@@ -148,7 +147,7 @@ export const HeroCards = () => {
           <div className="space-y-4">
             {[
               "$45000+ saved",
-              "10 clients",
+              "4 clients",
               "In-house engineering team",
               "Latest AI technologies",
             ].map((benefit: string) => (
@@ -168,7 +167,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] top-[5px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card className="absolute w-[350px] -right-[10px] top-[25px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 bg-primary/20 p-3 rounded-full flex items-center justify-center">
             <Phone width={28} height={28} />

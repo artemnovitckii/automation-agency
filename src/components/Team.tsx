@@ -10,8 +10,8 @@ import {
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import artem from "../assets/artem.png";
 import hitarth from "../assets/hitarth.jpeg";
-import shannon from "../assets/shannon.jpeg";
 import michael from "../assets/michael.jpeg";
+import shannon from "../assets/shannon.jpeg";
 
 interface TeamProps {
   imageUrl: string;
@@ -40,7 +40,12 @@ const teamList: TeamProps[] = [
     imageUrl: michael,
     name: "Michael Shaimerden",
     position: "Chief Operations Officer",
-    socialNetworks: [{ name: "Linkedin", url: "http://linkedin.com" }],
+    socialNetworks: [
+      {
+        name: "Linkedin",
+        url: "https://www.linkedin.com/in/michael-shaimerden/",
+      },
+    ],
     blob: "Expert in optimizing operations and ensuring efficiency.",
   },
   {

@@ -1,4 +1,3 @@
-import { Badge } from "./ui/badge";
 import {
   Card,
   CardContent,
@@ -6,7 +5,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import samsung from "../assets/samsung.png";
+import delux from "../assets/case-delux.png";
+import lux from "../assets/case-lux.png";
+import samsung from "../assets/case-samsung.png";
+import { Badge } from "./ui/badge";
 import { buttonVariants } from "./ui/button";
 
 interface FeatureProps {
@@ -19,24 +21,21 @@ interface FeatureProps {
 const features: FeatureProps[] = [
   {
     title: "Samsung",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+    description: "Price Monitoring Automation for Samsung",
     image: samsung,
     href: "/clients/samsung",
   },
   {
-    title: "Company 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: samsung,
-    href: "/clients/company 2",
+    title: "Delux Interiors",
+    description: "Data Pipeline Automation",
+    image: delux,
+    href: "/clients/delux-interiors",
   },
   {
-    title: "Company 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: samsung,
-    href: "/clients/compnay 3",
+    title: "LUX",
+    description: "Coming soon...",
+    image: lux,
+    href: "/clients/lux",
   },
 ];
 
@@ -49,11 +48,11 @@ const featureList: string[] = [
 
 export const Features = () => {
   return (
-    <section className="container py-24 sm:py-32 space-y-8">
+    <section id="our-work" className="container py-24 sm:py-32 space-y-8">
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
         Our{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Clients
+          Work
         </span>
       </h2>
 
@@ -83,7 +82,7 @@ export const Features = () => {
                 <img
                   src={image}
                   alt="About feature"
-                  className="w-[200px] lg:w-[300px] mx-auto py-10"
+                  className="w-[150px] lg:w-[250px] mx-auto py-10"
                 />
               </CardFooter>
               <div className="p-6 flex">
