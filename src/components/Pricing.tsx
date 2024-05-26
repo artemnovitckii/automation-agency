@@ -81,7 +81,7 @@ export const Pricing = () => {
         of The Money You Save
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        You will never pay more than you have to.
+        No deposits. Cancel anytime.
       </h3>
       {/* <div className="flex place-content-center gap-8">
         {pricingList.map((pricing: PricingProps) => (

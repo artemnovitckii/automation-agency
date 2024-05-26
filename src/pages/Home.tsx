@@ -19,13 +19,13 @@ const Home: React.FC<HomeProps> = ({}) => {
       <Hero />
       <Sponsors />
       <About />
+      <Pricing />
       <HowItWorks />
       <Features />
       <Services />
       <Cta />
       <Testimonials />
       <Team />
-      <Pricing />
       <FAQ />
     </>
   );
