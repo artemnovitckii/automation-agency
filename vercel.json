@@ -1,9 +1,3 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/" },
-    {
-      "src": "/free-automation-consultation",
-      "dest": "/"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
