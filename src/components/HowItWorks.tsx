@@ -1,5 +1,5 @@
+import { GiftIcon, MapIcon, MedalIcon, PlaneIcon } from "../components/Icons";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -11,7 +11,7 @@ const features: FeatureProps[] = [
   {
     icon: <MedalIcon />,
     title: "Free Consultation",
-    description: "Firstly, we will make sure thay you we can help you.",
+    description: "Firstly, we will make sure that we can help you.",
   },
   {
     icon: <MapIcon />,
